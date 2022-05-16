@@ -16,9 +16,8 @@ public class Solution {
         int diff = b;
 
         for(int i = 0; i < keyboardSize; i++) {    
+             if(keyboards[i] >= b) continue;
             for(int j = 0; j < driveSize; j++) {
-                if(keyboards[i] + drives[j] > b) continue;
-
                 if(diff > b - (keyboards[i] + drives[j])) {
                     diff = b - (keyboards[i] + drives[j]);
                 }
