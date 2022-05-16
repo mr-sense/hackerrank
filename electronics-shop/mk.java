@@ -15,9 +15,7 @@ public class Solution {
         int driveSize = drives.length;
         int diff = b;
 
-        for(int i = 0; i < keyboardSize; i++) {
-            if(keyboards[i] >= b) continue;
-
+        for(int i = 0; i < keyboardSize; i++) {    
             for(int j = 0; j < driveSize; j++) {
                 if(keyboards[i] + drives[j] > b) continue;
 
