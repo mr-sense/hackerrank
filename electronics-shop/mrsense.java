@@ -6,11 +6,6 @@ import java.util.regex.*;
 
 public class Solution {
 
-    static int getMaxMoneySpent(int[] keyboards, int[] drives, int b) {
-        
-        return 0;
-    } 
-
     /*
      * Complete the getMoneySpent function below.
      */
@@ -22,9 +17,16 @@ public class Solution {
         int maxVal = -1;
         
         for (int k = 0; k < keyboards.length; k++) {
+            if (keyboards[k] >= b) {
+                continue;
+            }
+            
             for (int d = 0; d < drives.length; d++) {
                 int sum = keyboards[k] + drives[d];
-                if (sum <= b && maxVal < sum) {
+                if (sum == b) {
+                    return sum;
+                }
+                if (sum < b && maxVal < sum) {
                     maxVal = sum;
                 }
             }
