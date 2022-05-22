@@ -10,9 +10,8 @@ class Result {
 
         String reverseVal = "";
         for(int i = strVal.length()-1; i >= 0; i--) {
-            //if(strVal.charAt(i) != '0') {
-                reverseVal += strVal.charAt(i);
-            //}
+            reverseVal += strVal.charAt(i);
+
         }
 
         return Integer.parseInt(reverseVal);
