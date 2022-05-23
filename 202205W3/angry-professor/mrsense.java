@@ -31,6 +31,8 @@ class Result {
                     return "NO";
                 }
             }
+            
+            //TODO 지각자 과반수 이상일때
         }
  
         return "YES";
