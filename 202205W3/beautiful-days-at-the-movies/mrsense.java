@@ -36,6 +36,8 @@ class Result {
         // Write your code here
         int totalBeautifulDays = 0;
         for (int z=i; z<=j; z++) {
+            //TODO 한자리 수의 역은 같은 값이므로 역을 계산할 필요가 없다
+            
             int beautifulNum = Math.abs(z - getReverseInteger(z));
             if (beautifulNum % k == 0) {
                 totalBeautifulDays++;
