@@ -20,13 +20,12 @@ class Result {
             if(a.get(i) <= 0) {
                 studentsNum ++;
                 if(studentsNum == k) {
-                    result = "NO";
-                    break;
+                    return "NO";
                 } 
             }
 
             if((k-studentsNum) > (a.size() - (i + 1))) {
-                break;
+                return "YES";
             }
         }
 
